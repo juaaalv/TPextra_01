@@ -19,19 +19,16 @@ namespace extra01
                 }
             }
             while (!notaValida);
-
             int promedioNotas = CalcularPromedio(notaLengua, notaMatematica, notaHistoria);
-            
             Mostrar(promedioNotas);
             string mensaje= AprobeONo(promedioNotas, "Aprobaste :)", "Desaprobaste...");
             Console.WriteLine(mensaje);
         }
-
+        //modulos
         static void Mostrar(int promedio)
         {
             Console.WriteLine($"Tu nota promedio es {promedio}");
         }
-
         static string AprobeONo(int promedio, string mensaje1, string mensaje2)
         {
             if (promedio >= 60)
@@ -45,7 +42,6 @@ namespace extra01
             const int cantidadNotas = 3;
             return (nota1 + nota2 + nota3) / cantidadNotas;
         }
-
         static bool ValidarNota(int nota1, int nota2, int nota3)
         { 
             if (nota1 < 0 || nota1 > 100 || nota2 < 0 || nota2 > 100 || nota3 < 0 || nota3 > 100)
@@ -64,7 +60,5 @@ namespace extra01
             int nota3 = int.Parse(Console.ReadLine());
              return (nota1, nota2, nota3);
         }
-
-
     }
 }
